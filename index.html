@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCart Product Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="top-toast" id="topToast" role="status" aria-live="polite">
+    <span id="toastMessage">Order placed successfully.</span>
+    <button class="toast-close" id="toastClose" aria-label="Close notification">✕</button>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div>
+          <p class="brand-name">NovaCart</p>
+          <p class="brand-sub">Future of shopping</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+        <button class="icon-btn" aria-label="Wishlist"><span>♡</span></button>
+        <button class="icon-btn" aria-label="Shopping cart"><span>🛒</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero container">
+      <div class="best-seller-bar">
+        <div>
+          <p class="eyebrow">Curated products</p>
+          <h2>Best seller spotlight</h2>
+          <p class="section-text">Use the toggle to reveal only the most-loved product on the website for a focused premium shopping experience.</p>
+        </div>
+
+        <button class="toggle-shell" id="bestSellerToggle" aria-expanded="false" aria-controls="bestSellerPanel">
+          <span class="toggle-label">Show best seller</span>
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="best-seller-panel" id="bestSellerPanel" hidden>
+        <div class="best-card">
+          <div class="best-badge">#1 Best Seller</div>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Red premium sneaker best seller" loading="lazy" width="900" height="700">
+          <div class="best-card-content">
+            <h3>Nova X Velocity Runner</h3>
+            <p>High-demand sneaker with adaptive foam cushioning, breathable knit upper, and collector-grade finish.</p>
+            <div class="best-price-row">
+              <strong>₹7,999</strong>
+              <button class="mini-btn" data-buy="Nova X Velocity Runner">Buy featured product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-shell container">
+      <div class="gallery-card">
+        <div class="gallery-main-wrap">
+          <span class="floating-tag">4.8 ★ Rated</span>
+          <img id="mainImage" class="gallery-main" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80" alt="Nova X Velocity Runner main product image" width="1200" height="1000">
+        </div>
+
+        <div class="thumb-row">
+          <button class="thumb active" data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80" data-alt="Nova X Velocity Runner front angle">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="Front angle thumbnail" loading="lazy" width="300" height="240">
+          </button>
+          <button class="thumb" data-image="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80" data-alt="Nova X Velocity Runner side view">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80" alt="Side view thumbnail" loading="lazy" width="300" height="240">
+          </button>
+          <button class="thumb" data-image="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1200&q=80" data-alt="Nova X Velocity Runner top view">
+            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=300&q=80" alt="Top view thumbnail" loading="lazy" width="300" height="240">
+          </button>
+          <button class="thumb" data-image="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=1200&q=80" data-alt="Nova X Velocity Runner lifestyle view">
+            <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=300&q=80" alt="Lifestyle thumbnail" loading="lazy" width="300" height="240">
+          </button>
+        </div>
+      </div>
+
+      <div class="product-info-card">
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">Limited drop</p>
+            <h1>Nova X Velocity Runner</h1>
+          </div>
+          <button class="wish-chip" id="wishlistBtn" aria-pressed="false">♡ Wishlist</button>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <span class="price">₹7,999</span>
+            <span class="old-price">₹9,499</span>
+          </div>
+          <span class="stock-tag">In stock</span>
+        </div>
+
+        <p class="product-copy">Engineered for all-day comfort with a lightweight knit body, responsive midsole, anti-slip outsole, and premium streetwear finish that works for both active and casual use.</p>
+
+        <div class="variant-grid">
+          <div class="variant-card">
+            <label for="sizeSelect">Choose size</label>
+            <select id="sizeSelect">
+              <option>UK 6</option>
+              <option>UK 7</option>
+              <option selected>UK 8</option>
+              <option>UK 9</option>
+              <option>UK 10</option>
+            </select>
+          </div>
+
+          <div class="variant-card">
+            <span class="label-title">Choose color</span>
+            <div class="color-picks" id="colorPicks">
+              <button class="color-dot active" data-color="Crimson" style="--dot:#d92d20" aria-label="Crimson color"></button>
+              <button class="color-dot" data-color="Jet Black" style="--dot:#1f1f1f" aria-label="Jet Black color"></button>
+              <button class="color-dot" data-color="Stone" style="--dot:#c9c3b7" aria-label="Stone color"></button>
+              <button class="color-dot" data-color="Ocean" style="--dot:#2563eb" aria-label="Ocean color"></button>
+            </div>
+            <p class="selection-note">Selected: <span id="selectedColor">Crimson</span></p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="primary-btn" id="addToCartBtn">Add to cart</button>
+          <button class="dark-btn" id="buyNowBtn">Buy now</button>
+        </div>
+
+        <div class="micro-benefits">
+          <span>Free delivery</span>
+          <span>7-day return</span>
+          <span>Secure payment</span>
+        </div>
+
+        <div class="innovation-card">
+          <div>
+            <p class="eyebrow">New modern feature</p>
+            <h3>Emotion-based gift mode</h3>
+            <p>Pick a mood like bold, calm, or energetic, and the page instantly restyles its visuals and recommendations to match the feeling you want to gift. This creates a mood-first shopping flow rarely seen in e-commerce.</p>
+          </div>
+          <div class="mood-switcher" id="moodSwitcher">
+            <button class="mood-btn active" data-mood="Bold">Bold</button>
+            <button class="mood-btn" data-mood="Calm">Calm</button>
+            <button class="mood-btn" data-mood="Energetic">Energetic</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid container">
+      <article class="info-card">
+        <p class="eyebrow">Description</p>
+        <h2>Product details</h2>
+        <p>This sneaker blends performance and style with breathable mesh, memory foam comfort, and sculpted grip zones for better movement on city streets or the gym floor.</p>
+        <ul>
+          <li>Breathable engineered knit upper.</li>
+          <li>Memory foam heel support.</li>
+          <li>Textured anti-slip sole pattern.</li>
+          <li>Feather-light build for daily wear.</li>
+        </ul>
+      </article>
+
+      <article class="info-card review-card">
+        <p class="eyebrow">Reviews</p>
+        <h2>Customer reviews</h2>
+        <div class="review-item">
+          <strong>Aarav M.</strong>
+          <span>★★★★★</span>
+          <p>Looks premium, fits perfectly, and the cushioning feels amazing during long walks.</p>
+        </div>
+        <div class="review-item">
+          <strong>Riya S.</strong>
+          <span>★★★★☆</span>
+          <p>Very stylish and lightweight. Delivery was fast and packaging felt premium too.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="feedback-band container">
+      <div>
+        <p class="eyebrow light">Feedback special</p>
+        <h2>Tell us how this page feels</h2>
+        <p>Your feedback helps improve the shopping journey. Rate the experience and unlock a surprise coupon.</p>
+      </div>
+      <div class="feedback-actions">
+        <button class="rate-btn" data-feedback="Loved it">★★★★★</button>
+        <button class="ghost-light" id="feedbackBtn">Send quick feedback</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
